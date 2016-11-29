@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FlockFuster</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        FlockFuster
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="formulario.html">Formulario de reserva</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Formulario de reserva</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                   <form method="post" action="resultado.php" accept-charset="UTF-8">
+                   <!-- Hidden -->
+                   <input type="hidden" name="enviado" value="1">
+                    <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Ingrese la información solicitada
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                        <!-- Tít (Text)-->
+                                        <div class="form-group">
+                                              <b>Título</b>
+                                              <input id="titulo" type="text" class="form-control" name="titulo" placeholder="Ingrese el nombre de la pelicula" required>
+                                        </div>
+                                        <!-- Apellido (Text)-->
+                                        <div class="form-group">
+                                              <b>Unidades</b>
+                                              <input id="unidades" type="number" class="form-control" name="unidades" placeholder="Ingrese cantidad" min="1" required>
+                                        </div>
+                                        <b>Instrucciones de despacho</b>
+                                         <div class="form-group">
+                                            <textarea id="instrucciones" rows="10" cols="50" name="instrucciones" wrap="hard"></textarea> 
+                                        </div>
+                            </div>
+                            
+                            <div id="cargaexterna">
+                                
+                            </div>
+                            
+                            <div class="panel-footer">
+                                <div class="text-right">
+                                   <button type="reset" class="btn btn-primary">
+                                    <i class="glyphicon glyphicon-repeat"></i>
+                                    Borrar formulario
+                                    </button>
+                                  <!-- Button submit -->
+                                  <button id="arrendar" type="submit" class="btn btn-success" disabled>
+                                    Arrendar
+                                    <i class="glyphicon glyphicon-menu-right"></i>
+                                  </button>
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Validador -->
+    <script src="validador.js"></script>
+</body>
+
+</html>
