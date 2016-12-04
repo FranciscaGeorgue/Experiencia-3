@@ -58,14 +58,14 @@ if($enviado == 0) {
         $error = $error . 'Lo sentimos solo contamos con 3 peliculas Psicosis. <br />';
     }
     if(empty($instrucciones)) {
-        $error = $error . 'Por favor, instrucciones de despacho. <br />';
+        $error = $error . 'Por favor, ingrese instrucciones de despacho. <br />';
     } 
 
     // Vista de error
     if(!empty($error)) {
     ?>
     <div class="alert alert-info">
-      <i class="glyphicon glyphicon-info-sign"></i> <b>No a ingresado los campos obligatorios.</b><br />
+      <i class="glyphicon glyphicon-info-sign"></i> <b>No ha ingresado los campos obligatorios.</b><br />
       <?php echo $error; ?>
     </div>
     <a href="./" class="btn btn-warning">

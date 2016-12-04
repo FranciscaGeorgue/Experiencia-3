@@ -1,0 +1,15 @@
+{
+  "name": "Experiencia-3",
+  "homepage": "https://github.com/FranciscaGeorgue/Experiencia-3",
+  "authors": [
+    "Francisca Georgue",
+    "Alfonso Prado"
+  ],
+  "description": "Experiencia 3, ramo Desarrollo Web",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}

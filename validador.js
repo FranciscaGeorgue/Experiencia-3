@@ -37,18 +37,34 @@ $(document).ready(function() {
         }
     });
     
-/*
-    $("#instrucciones").focusout(function(){
-        var dmJSON = "https://api.themoviedb.org/3/search/movie?api_key=73b997888008f97f542667c617a28db7&query=Matrix
-";
-        $.getJSON( dmJSON, function(data) {
-            $.each(data.entries, function(i, f) {
-                var tblRow = "<tr>" + "<td>" + f.id + "</td>" + "<td>" + f.user.username + "</td>" + "<td>" + f.message + "</td>" + "<td> " + f.location + "</td>" +  "<td>" + f.at + "</td>" + "</tr>"
-            $(tblRow).appendTo("#entrydata tbody");
+     $("textarea").on( "click", function(){
+         var titulo = $('#titulo').val();
+         if(titulo.toLowerCase() == "matrix"){
+             var matrixdata = "matrixdata.json";
+             $.getJSON( matrixdata, function( data ) {
+                 $.each(data, function(key, val){
+                     recursiveFunction(key, val)
+                 });
              });
+         }
+         if(titulo.toLowerCase() == "psicosis"){
+             alert("No hay información de 'Psicosis'.");
+         }
+     });
 
-        });
-    });*/
-    
-    
+    function recursiveFunction(key, val) {
+        var items = [];
+        if (val instanceof Object) {
+            $.each(val, function(key, val) {
+                recursiveFunction(key, val)
+            });
+        }else{
+            items.push( "<li id='" + key + "'><label>" + key + " : </label> " + val +" </li>" );
+        }
+
+        $( "<ul/>", {
+            "class": "my-new-list",
+            html: items.join( "" )
+        }).appendTo( ".inner" );
+    }
 });
