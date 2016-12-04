@@ -7,8 +7,8 @@ function Filtro($texto) {
 
 // Variables
 $enviado = isset($_POST['enviado']) ? (int) $_POST['enviado'] : 0;
-$titulo = isset($_POST['titulo']) ? Filtro($_POST['titulo']) : '';
-$unidades = isset($_POST['unidades']) ? (int) $_POST['unidades'] : 0;
+$titulo = isset($_POST['tituloPelicula']) ? Filtro($_POST['tituloPelicula']) : '';
+$unidades = isset($_POST['unidadesPelicula']) ? (int) $_POST['unidadesPelicula'] : 0;
 $instrucciones = isset($_POST['instrucciones']) ? Filtro($_POST['instrucciones']) : '';
 
 $error = '';
@@ -32,7 +32,7 @@ $error = '';
   <span style="padding-top: 10px;"></span>
 <?php
 // Mostrar contenido
-    
+
 if($enviado == 0) {
 ?>
 <div class="alert alert-info">
@@ -43,7 +43,7 @@ if($enviado == 0) {
   <i class="glyphicon glyphicon-chevron-left"></i>
   Volver
 </a>
-<?php 
+<?php
 } else {
     if(empty($titulo)) {
         $error = $error . 'Por favor, ingrese nombre de pelicula. <br />';
@@ -57,18 +57,15 @@ if($enviado == 0) {
     } else if (strtolower($titulo) == "psicosis" && $unidades > 3) {
         $error = $error . 'Lo sentimos solo contamos con 3 peliculas Psicosis. <br />';
     }
-    if(empty($instrucciones)) {
-        $error = $error . 'Por favor, ingrese instrucciones de despacho. <br />';
-    } 
 
     // Vista de error
     if(!empty($error)) {
     ?>
     <div class="alert alert-info">
-      <i class="glyphicon glyphicon-info-sign"></i> <b>No ha ingresado los campos obligatorios.</b><br />
+      <i class="glyphicon glyphicon-info-sign"></i> <b>No a ingresado los campos obligatorios.</b><br />
       <?php echo $error; ?>
     </div>
-    <a href="./" class="btn btn-warning">
+    <a href="formulario.html" class="btn btn-warning">
       <i class="glyphicon glyphicon-chevron-left"></i>
       Volver
     </a>
@@ -111,7 +108,7 @@ if($enviado == 0) {
     </div>
   </footer>
 </div>
-   
+
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 

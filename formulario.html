@@ -71,36 +71,36 @@
                             </div>
                             <!-- /.panel-heading -->
                             <div class="panel-body">
-                                        <!-- Tít (Text)-->
-                                        <div class="form-group">
-                                              <b>Título</b>
-                                              <input id="titulo" type="text" class="form-control" name="titulo" placeholder="Ingrese el nombre de la pelicula" required>
+                                        <!-- Título película (Text)-->
+                                        <div class="form-group"> <!-- has-success has-error -->
+                                            <label class="control-label" for="inputTituloPelicula">Título película</label>
+                                            <input id="inputTituloPelicula" class="form-control" name="tituloPelicula" type="text" placeholder="Ingrese el nombre de la película."  aria-describedby="helpBlockTituloPelicula" requied>
+                                            <span id="helpBlockTituloPelicula" class="help-block hidden"></span>
                                         </div>
-                                        <!-- Unidades (Number)-->
-                                        <div class="form-group">
-                                              <b>Unidades</b>
-                                              <input id="unidades" type="number" class="form-control" name="unidades" placeholder="Ingrese cantidad" min="1" required>
+                                        <!-- Unidad Pelicula (number)-->
+                                        <div class="form-group"> 
+                                            <label class="control-label" for="inputUnidadesPelicula">Unidades película</label>
+                                            <input id="inputUnidadesPelicula" class="form-control" name="unidadesPelicula" type="text" placeholder="Ingrese la cantidad de películas que va arrendar." aria-describedby="helpBlockUnidadesPelicula" disabled requied>
+                                            <span id="helpBlockUnidadesPelicula" class="help-block">Para poder ingresar las unidades debe ingresar una pelicula antes.</span>
                                         </div>
-                                        <b>Instrucciones de despacho</b>
-                                            <div class="form-group">
-                                                <textarea id="instrucciones" rows="10" cols="50" name="instrucciones" wrap="hard"></textarea> 
-                                            </div>
-                            </div>
-                            
-                            <div id="contenido" class="inner">
-                                
+                                        <div class="form-group">
+                                            <label class="control-label" for="textAreaInstrucciones">Instrucciones despacho</label>
+                                            <textarea id="textAreaInstrucciones" class="form-control" rows="10" name="instrucciones" placeholder="Ingrese las instrucciones para el despacho."></textarea> 
+                                        </div>
+                                        <div id="infoPelicula" class="row form-group hidden">
+                                        </div>
                             </div>
                             
                             <div class="panel-footer">
                                 <div class="text-right">
                                    <button type="reset" class="btn btn-primary">
-                                    <i class="glyphicon glyphicon-repeat"></i>
+                                    <span class="glyphicon glyphicon-repeat"></span>
                                     Borrar formulario
                                     </button>
                                   <!-- Button submit -->
                                   <button id="arrendar" type="submit" class="btn btn-success" disabled>
                                     Arrendar
-                                    <i class="glyphicon glyphicon-menu-right"></i>
+                                    <span class="glyphicon glyphicon-menu-right"></span>
                                   </button>
                                 </div>
                             </div>
@@ -109,17 +109,14 @@
                 </div>
             </div>
         </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
-
+    <!-- /#page-content-wrapper -->
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
+    <script src="js/jquery-3.1.1.min.js"></script>
+    
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
     
     <!-- Validador -->
     <script src="validador.js"></script>
